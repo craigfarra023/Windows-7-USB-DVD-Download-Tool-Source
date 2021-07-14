@@ -49,7 +49,8 @@ To bypass formatting the USB device within the tool:
 NOTE: The USB device should be formatted manually before running the tool.
 
 <hr/>
-
+known issue and solution - <strong>bootsect.exe</strong>
+this application will format (unless you specify the above registry DWORD) the drive to a NTFS partiton (using MBR - - - not GPT+UEFI), 
 when using it to set a USB, the programs tries to use its own personal version of <code>bootsect.exe</code> (embedded in the exe as a binary resource, copied to your <code>%TEMP%</code> folder),  
 but sometimes it will fail if it can not find <code>api-ms-win-core-heap-obsolete-l1-1-0.dll</code>,  
 known as <code>StatusBootloaderError</code>, with the message:  
@@ -60,15 +61,15 @@ Files copied successfully.  However, we were unable to run bootsect to make the 
 <img src="_resources_and_bootsect_exe/2021-07-14_155141.jpg" />  
 
 
-open CMD as admin and change-directory to the <code>/_resources_and_bootsect_exe/</code> folder, it has binaries (which were taken from <code>C:\Program Files (x86)\EaseUS\EaseUS Partition Master 14.0\DC\bin</code> - by the way..), and simply try running the command (replace Z: with your actual USB-drive letter, be very carful!):  
-<code>call "bootsect.exe" /nt60 E: /force /mbr</code>
+open CMD as admin and change-directory to the <code>/_resources_and_bootsect_exe/</code> folder, it has binaries (which were taken from <code>C:\Program Files (x86)\EaseUS\EaseUS Partition Master 14.0\DC\bin</code> - by the way..), and simply try running the command (<strong>replace Z: with your actual USB-drive letter, be very carful!!!</strong>):  
+<code>call "bootsect.exe" /nt60 Z: /force /mbr</code>
 
 you will get someting like this:  
 
 <pre>
 Target volumes will be updated with BOOTMGR compatible bootcode.
 
-E: (\\?\Volume{01234567-890a-bcde-f012-3456789abcde})
+Z: (\\?\Volume{01234567-890a-bcde-f012-3456789abcde})
 
     Successfully updated NTFS filesystem bootcode.
 
