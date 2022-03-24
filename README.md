@@ -2,7 +2,20 @@ the source from http://go.microsoft.com/fwlink/?LinkId=218888
 or https://www.microsoft.com/en-us/download/confirmation.aspx?id=56485&6B49FDFB-8E5B-4B07-BC31-15695C5A2143=1
 or https://download.microsoft.com/download/C/4/8/C48F6E20-FE20-41C6-8C1C-408FE7B49A3A/Windows7-USB-DVD-Download-Tool-Installer-en-US.exe
 
+<hr/>
 
+edit:  
+
+I advise using Rufus instead: https://github.com/pbatard/rufus  
+
+or one of its alternatives:  
+
+https://alternativeto.net/software/unetbootin/about/  
+https://alternativeto.net/software/etcher/about/  
+https://alternativeto.net/software/ventoy/about/  
+( https://alternativeto.net/software/rufus/ )  
+
+<hr/>
 
 <br/>
 <br/>
